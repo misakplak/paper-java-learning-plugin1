@@ -5,7 +5,6 @@ import org.bukkit.block.BlockState;
 import org.bukkit.plugin.java.JavaPlugin;
 import java.util.HashMap;
 
-
 public final class PaperPlugin extends JavaPlugin {
 
     private static PaperPlugin instance;
@@ -26,22 +25,25 @@ public final class PaperPlugin extends JavaPlugin {
 
         saveDefaultConfig();
 
-        getServer().getPluginManager().registerEvents(
-                new BlockListener(),
-                this
-        );
+        getServer().getPluginManager().registerEvents(new BlockListener(), this);
+        getServer().getPluginManager().registerEvents(new JoinListener(), this);
 
         getCommand("misakplak").setExecutor(new MainCommand());
         getCommand("misakplak").setTabCompleter(new MainTabCompleter());
 
-        getCommand("regen").setExecutor(new HealCommand());
+        // Basic commands
 
-        getCommand("gmc").setExecutor(new GMcreative());
-        getCommand("gms").setExecutor(new GMsurvival());
-        getCommand("gmsp").setExecutor(new GMspectator());
-        getCommand("gma").setExecutor(new GMadventure());
+        BasicCommands basicCommands = new BasicCommands();
+        getCommand("regen").setExecutor(basicCommands);
+        getCommand("fly").setExecutor(basicCommands);
 
-        getCommand("fly").setExecutor(new Flycommand());
+        // Gamemode commands
+
+        GameModeCommands gm = new GameModeCommands();
+        getCommand("gmc").setExecutor(gm);
+        getCommand("gms").setExecutor(gm);
+        getCommand("gmsp").setExecutor(gm);
+        getCommand("gma").setExecutor(gm);
 
         getCommand("announce").setExecutor(new AnnounceCommand());
 
