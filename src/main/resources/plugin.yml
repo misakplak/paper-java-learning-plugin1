@@ -1,0 +1,106 @@
+name: JAVAlearning-paper
+version: '1.0-SNAPSHOT'
+main: cz.misakplak.plugin.PaperPlugin
+api-version: '1.21'
+authors: [misakplak]
+description: plugin for me to learn java
+
+commands:
+  misakplak:
+    description: Main plugin command
+    usage: /misakplak reload
+
+  heal:
+    description: Heals You
+    usage: /heal
+
+  gmc:
+    description: gamemode creative
+    usage: /gmc
+
+  gms:
+    description: gamemode survival
+    usage: /gms
+
+  gmsp:
+    description: gamemode spectator
+    usage: /gmsp
+
+  gma:
+    description: gamemode adventure
+    usage: /gma
+
+  fly:
+    description: flight in survival
+    usage: /fly
+
+  announce:
+    description: announce a msg to whole server
+    usage: /announce {msg}
+
+  savearena1:
+    description: Save Arena Pos 1
+    usage: /savearena1
+
+  savearena2:
+    description: Save Arena Pos 2
+    usage: /savearena2
+
+  arenainfo:
+    description: arenainfo
+    usage: /arenainfo
+
+  blockcount:
+    description: block count in arena
+    usage: /blockcount
+
+  savearena:
+    description: save arena
+    usage: /savearena
+
+  resetarena:
+    description: resets arena
+    usage: /restetarena
+
+
+
+permissions:
+  misakplak.place:
+    description: Allows placing blocks
+    default: op
+
+  misakplak.break:
+    description: Allows breaking blocks
+    default: op
+
+  misakplak.reload:
+    description: Allows reloading the config
+    default: op
+
+  misakplak.heal:
+    description: Heals you
+    default: op
+
+  gm.c:
+    description: Gamemode creative
+    default: op
+
+  gm.s:
+    description: Gamemode survival
+    default: op
+
+  gm.sp:
+    description: Gamemode spectator
+    default: op
+
+  gm.a:
+    description: Gamemode adventure
+    default: op
+
+  misakplak.fly:
+    description: Flight in Survival
+    default: op
+
+  misakplak.announce:
+    descriptions: Announce a msg to whole server
+    default: op

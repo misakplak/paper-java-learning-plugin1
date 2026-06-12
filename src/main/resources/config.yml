@@ -1,0 +1,13 @@
+join-message(welcomes player to the server): "§aWelcome to the server!"
+leave-message: §c§lLeft the server!
+#
+#
+#
+#
+blockbreakmessage: §c§lYou cannot break blocks!
+blockbreakedmessage: §a§lBlock Broken!
+#
+#
+#
+blockplacemessage: §c§lYou cannot place blocks!
+blockplacedmessage: §a§lBlock Placed!
