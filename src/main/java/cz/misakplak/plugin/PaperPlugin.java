@@ -1,20 +1,21 @@
 package cz.misakplak.plugin;
 
 import org.bukkit.Location;
+import org.bukkit.block.BlockState;
 import org.bukkit.plugin.java.JavaPlugin;
 import java.util.HashMap;
-import org.bukkit.Material;
+
 
 public final class PaperPlugin extends JavaPlugin {
 
     private static PaperPlugin instance;
 
-    public Location pos1;
-    public Location pos2;
+    private Location pos1;
+    private Location pos2;
 
-    private HashMap<Location, Material> arenaBlocks = new HashMap<>();
+    private HashMap<Location, BlockState> arenaBlocks = new HashMap<>();
 
-    public HashMap<Location, Material> getArenaBlocks() {
+    public HashMap<Location, BlockState> getArenaBlocks() {
         return arenaBlocks;
     }
 

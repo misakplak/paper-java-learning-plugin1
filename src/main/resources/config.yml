@@ -1,4 +1,4 @@
-join-message(welcomes player to the server): "§aWelcome to the server!"
+join-message: "§aWelcome to the server!"
 leave-message: §c§lLeft the server!
 #
 #

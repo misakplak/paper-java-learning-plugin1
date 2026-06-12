@@ -2,11 +2,10 @@ package cz.misakplak.plugin;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
-import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
+import org.bukkit.block.BlockState;
 
 public class ResetArena implements CommandExecutor {
 
@@ -17,17 +16,17 @@ public class ResetArena implements CommandExecutor {
 
 
         if (!sender.hasPermission("misakplak.resetarena")) {
-            sender.sendMessage(ChatColor.RED + "§c§lYou don't have permission!");
+            sender.sendMessage("§c§lYou don't have permission!");
             return true;
         }
 
 
-        for (Location loc : PaperPlugin.getInstance().getArenaBlocks().keySet()) {
-            Material material = PaperPlugin.getInstance().getArenaBlocks().get(loc);
-            loc.getBlock().setType(material);
-        }
+            for (BlockState state : PaperPlugin.getInstance().getArenaBlocks().values()) {
+                state.update(true, false);
+            }
 
-        sender.sendMessage("§a§lArena has been reset!");
-        return true;
+            sender.sendMessage("§a§lArena has been reset!");
+            return true;
+
     }
 }

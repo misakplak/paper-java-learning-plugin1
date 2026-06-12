@@ -1,12 +1,12 @@
 package cz.misakplak.plugin;
 
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.block.Block;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.Location;
+import org.bukkit.block.BlockState;
 
 public class SaveArenaCommand implements CommandExecutor {
 
@@ -22,8 +22,14 @@ public class SaveArenaCommand implements CommandExecutor {
         }
 
 
+
             Location pos1 = PaperPlugin.getInstance().getPos1();
             Location pos2 = PaperPlugin.getInstance().getPos2();
+
+        if (pos1 == null || pos2 == null) {
+            sender.sendMessage("§cSet arena positions first!");
+            return true;
+        }
 
             int minX = Math.min(pos1.getBlockX(), pos2.getBlockX());
             int maxX = Math.max(pos1.getBlockX(), pos2.getBlockX());
@@ -49,7 +55,7 @@ public class SaveArenaCommand implements CommandExecutor {
 
                         PaperPlugin.getInstance().getArenaBlocks().put(
                                 block.getLocation(),
-                                block.getType()
+                                block.getState()
                         );
 
 

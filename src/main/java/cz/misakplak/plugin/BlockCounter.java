@@ -46,10 +46,10 @@ public class BlockCounter implements CommandExecutor {
             for (int y = minY; y <= maxY; y++) {
                 for (int z = minZ; z <= maxZ; z++) {
 
-
-
-
+                    Block block = pos1.getWorld().getBlockAt(x, y, z);
+                    if (block.getType() != Material.AIR) {
                         count++;
+                    }
 
 
 

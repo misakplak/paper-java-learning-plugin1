@@ -14,6 +14,7 @@ public class SaveArena2Command implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+
         Player player = (Player) sender;
 
 
@@ -22,7 +23,7 @@ public class SaveArena2Command implements CommandExecutor {
             return true;
         }
 
-        if (!(sender instanceof  Player)) {
+        if (!(sender instanceof Player)) {
             sender.sendMessage("Only players can use this command!");
             return true;
         }

@@ -18,6 +18,11 @@ public class HealCommand implements CommandExecutor {
             }
         }
 
+        if (args.length == 0) {
+            sender.sendMessage("§cUsage: /heal <player>");
+            return true;
+        }
+
         target.setHealth(20);
         target.sendMessage("§a§lYou have been healed!");
 

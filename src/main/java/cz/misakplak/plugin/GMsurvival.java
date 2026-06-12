@@ -12,17 +12,15 @@ public class GMsurvival implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
-        if (!(sender instanceof Player)) {
-            sender.sendMessage("Only players can use this command.");
+        if (!(sender instanceof Player player)) {
             return true;
         }
 
         if (!sender.hasPermission("gm.s")) {
-            sender.sendMessage(ChatColor.RED + "You don't have permission!");
+            sender.sendMessage("§c§lYou don't have permission!");
             return true;
         }
 
-        Player player = (Player) sender;
 
         player.setGameMode(GameMode.SURVIVAL);
         player.sendMessage("§a§lYour GameMode has been set to Survival!");
