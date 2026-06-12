@@ -10,9 +10,9 @@ commands:
     description: Main plugin command
     usage: /misakplak reload
 
-  heal:
+  regen:
     description: Heals You
-    usage: /heal
+    usage: /regen
 
   gmc:
     description: gamemode creative

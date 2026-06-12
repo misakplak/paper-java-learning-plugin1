@@ -34,7 +34,7 @@ public final class PaperPlugin extends JavaPlugin {
         getCommand("misakplak").setExecutor(new MainCommand());
         getCommand("misakplak").setTabCompleter(new MainTabCompleter());
 
-        getCommand("heal").setExecutor(new HealCommand());
+        getCommand("regen").setExecutor(new HealCommand());
 
         getCommand("gmc").setExecutor(new GMcreative());
         getCommand("gms").setExecutor(new GMsurvival());
