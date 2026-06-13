@@ -32,6 +32,6 @@ public class SaveArena1Command implements CommandExecutor {
         sender.sendMessage("§3§lMake sure position 2 is saved too, than run /savearena");
 
 
-        return false;
+        return true;
     }
 }
