@@ -1,13 +1,8 @@
-join-message: "§a§lWelcome to the server!"
+join-message: "§a§l Welcome to the server!"
 leave-message: §c§l Left the server!
 #
 #
 #
 #
 blockbreakmessage: §c§lYou cannot break blocks!
-blockbreakedmessage: §a§lBlock Broken!
-#
-#
-#
 blockplacemessage: §c§lYou cannot place blocks!
-blockplacedmessage: §a§lBlock Placed!

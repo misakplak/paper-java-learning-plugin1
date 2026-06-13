@@ -1,5 +1,7 @@
 package cz.misakplak.plugin;
 
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -18,22 +20,15 @@ public class JoinListener implements Listener {
 
 
         Player player = event.getPlayer();
-
-        event.getPlayer().sendMessage(
-                PaperPlugin.getInstance()
-                        .getConfig()
-                        .getString("join-message")
-        );
+        Bukkit.broadcastMessage("§3" + player.getName() + "§a§l Joined the game");
     }
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onLeave(PlayerQuitEvent event) {
 
         event.setQuitMessage(null);
 
-        event.getPlayer().sendMessage(
-                PaperPlugin.getInstance()
-                .getConfig()
-                .getString("leave-message")
-                );
+        Player player =  event.getPlayer();
+
+        Bukkit.broadcastMessage("§3" + player.getName() + "§a§l Left the game");
     }
 }

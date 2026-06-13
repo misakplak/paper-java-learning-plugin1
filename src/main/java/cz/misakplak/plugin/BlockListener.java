@@ -26,12 +26,6 @@ public class BlockListener implements Listener {
             return;
         }
 
-        player.sendMessage(
-                PaperPlugin.getInstance()
-                        .getConfig()
-                        .getString("blockbreakedmessage")
-        );
-
 
     }
 
@@ -50,11 +44,5 @@ public class BlockListener implements Listener {
             );
             return;
         }
-
-        player.sendMessage(
-                PaperPlugin.getInstance()
-                        .getConfig()
-                        .getString("blockplacedmessage")
-        );
     }
 }

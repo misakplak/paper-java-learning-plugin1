@@ -31,6 +31,7 @@ public class SaveArena2Command implements CommandExecutor {
 
         PaperPlugin.getInstance().setPos2(player.getLocation());
         player.sendMessage("§a§lArena position 2 saved!");
+        sender.sendMessage("§3§lMake sure position 1 is saved too, than run /savearena");
 
 
         return true;
